@@ -10,13 +10,14 @@ import br.com.buscatexto.stream.StringStream;
 
 public class TesteStream {
 	public static void main(String[] args) throws IOException {
-		Stream str = new StringStream("google");
+		Stream stream = new StringStream("google");
 
 		boolean achou = false;
-		while (!achou && str.hasNext()) {
-			char atual = str.getNext();
-			if (StringUtils.countMatches(str.toString(), String.valueOf(atual)) == NumberUtils.INTEGER_ONE) {
-				System.out.println(atual);
+		while (!achou && stream.hasNext()) {
+			char caracterAtual = stream.getNext();
+			if (StringUtils.countMatches(stream.toString(),
+					String.valueOf(caracterAtual)) == NumberUtils.INTEGER_ONE) {
+				System.out.println(caracterAtual);
 				achou = true;
 			}
 		}

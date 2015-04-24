@@ -12,6 +12,7 @@ public class Teste {
 	 */
 	public static void main(String[] args) {
 		String texto = "inconstitucionalicimamente".toLowerCase();
+		List<String> palavraAsList = new ArrayList<String>();
 		char[] textoArray = texto.toCharArray();
 		boolean achouPrimeiraLetra = false;
 
@@ -24,8 +25,12 @@ public class Teste {
 			}
 		}
 
-		String teste = Teste
-				.getStringAsList(texto)
+		// Converte texto para list de string
+		texto.chars().forEach(s -> {
+			palavraAsList.add(String.valueOf((char) s));
+		});
+
+		String teste = palavraAsList
 				.stream()
 				.filter(s -> StringUtils.countMatches(texto, s) == NumberUtils.INTEGER_ONE)
 				.limit(1).findFirst().get();
