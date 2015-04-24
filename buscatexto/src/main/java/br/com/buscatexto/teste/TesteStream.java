@@ -10,16 +10,24 @@ import br.com.buscatexto.stream.StringStream;
 
 public class TesteStream {
 	public static void main(String[] args) throws IOException {
-		Stream stream = new StringStream("google");
-
+		Stream input = new StringStream("google");
+		System.out.println(TesteStream.firstChar(input));
+	}
+	
+	public static char firstChar(Stream input) {
 		boolean achou = false;
-		while (!achou && stream.hasNext()) {
-			char caracterAtual = stream.getNext();
-			if (StringUtils.countMatches(stream.toString(),
+		char primeiroCaracterNaoRepetido = 0;
+		
+		while (!achou && input.hasNext()) {
+			char caracterAtual = input.getNext();
+			
+			if (StringUtils.countMatches(input.toString(),
 					String.valueOf(caracterAtual)) == NumberUtils.INTEGER_ONE) {
-				System.out.println(caracterAtual);
+				primeiroCaracterNaoRepetido = caracterAtual;
 				achou = true;
 			}
 		}
+		
+		return primeiroCaracterNaoRepetido;
 	}
 }
