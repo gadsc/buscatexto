@@ -1,6 +1,7 @@
 package br.com.buscatexto.stream;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.math.NumberUtils;
 
 public class StringStream implements Stream {
 	private String input;
@@ -8,9 +9,9 @@ public class StringStream implements Stream {
 	private int contador;
 
 	public StringStream(String input) {
-		contador = 0;
+		contador = NumberUtils.INTEGER_ZERO;
 		this.input = input;
-		this.inputArray = StringUtils.isBlank(input) ? new char[0] : input
+		this.inputArray = StringUtils.isBlank(input) ? new char[NumberUtils.INTEGER_ZERO] : input
 				.toCharArray();
 	}
 

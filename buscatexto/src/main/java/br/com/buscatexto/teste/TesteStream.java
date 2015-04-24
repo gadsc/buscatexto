@@ -13,21 +13,21 @@ public class TesteStream {
 		Stream input = new StringStream("google");
 		System.out.println(TesteStream.firstChar(input));
 	}
-	
+
 	public static char firstChar(Stream input) {
 		boolean achou = false;
-		char primeiroCaracterNaoRepetido = 0;
-		
+		char primeiroCaracterNaoRepetido = Character.MIN_VALUE;
+
 		while (!achou && input.hasNext()) {
 			char caracterAtual = input.getNext();
-			
+
 			if (StringUtils.countMatches(input.toString(),
 					String.valueOf(caracterAtual)) == NumberUtils.INTEGER_ONE) {
 				primeiroCaracterNaoRepetido = caracterAtual;
 				achou = true;
 			}
 		}
-		
+
 		return primeiroCaracterNaoRepetido;
 	}
 }
