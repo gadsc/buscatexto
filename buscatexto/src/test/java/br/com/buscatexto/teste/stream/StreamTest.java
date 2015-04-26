@@ -7,6 +7,12 @@ import org.junit.Test;
 import br.com.buscatexto.stream.Stream;
 import br.com.buscatexto.stream.impl.StringStream;
 
+/**
+ * Classe de teste para validar a implementação feita da interface Stream
+ * 
+ * @author Gabz
+ *
+ */
 public class StreamTest extends TestCase {
 	private Stream input;
 	

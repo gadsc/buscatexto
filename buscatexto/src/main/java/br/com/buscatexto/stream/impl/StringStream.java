@@ -5,6 +5,12 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import br.com.buscatexto.stream.Stream;
 
+/**
+ * Classe que implementa a interface Stream
+ * 
+ * @author Gabz
+ *
+ */
 public class StringStream implements Stream {
 	private String input;
 	private char[] inputArray;

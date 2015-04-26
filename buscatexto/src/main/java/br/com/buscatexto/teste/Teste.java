@@ -6,6 +6,12 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
+/**
+ * Teste com a interface Stream do Java 8
+ * 
+ * @author Gabz
+ *
+ */
 public class Teste {
 	/**
 	 * @param args
