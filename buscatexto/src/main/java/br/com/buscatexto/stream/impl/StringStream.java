@@ -1,7 +1,9 @@
-package br.com.buscatexto.stream;
+package br.com.buscatexto.stream.impl;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
+
+import br.com.buscatexto.stream.Stream;
 
 public class StringStream implements Stream {
 	private String input;
